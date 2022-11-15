@@ -83,33 +83,78 @@ function knownFor(actor) {
 
 const renderActor = (actor) => {
     CONTAINER.innerHTML = `
-     <div  class="bg-black w-full   absolute  ">
-        <div class="flex mt-16 ml-10">
-            <div class="mainmovie-div bg-gray-300 bg-no-repeat bg-cover bg-center "  style="background-Image: url(${BACKDROP_BASE_URL+actor.profile_path})">
-                <div class="movie-triangle1 z-50  absolute"></div>
-                <div class="movie-triangle2 z-50  absolute"></div>
-            </div>
-
-            <div class="red-circle w-9 h-9 bg-red-900 ml-36 mt-3 rounded-full "></div>
-            <div class="line-1 rounded absolute "></div>
-
-            <div class="mainmovie-div flex flex-col gap-24  bg-black ml-24 ">
-                <div class="">
-                    <p class="moviesparaghrap  mt-3  text-center text-5xl text-red-900 ">${actor.name}</p>
-                </div>
-                <div class="">
-                    <p class="moviesparaghrap2 font-bold  text-center text-lg text-white "></p>
-                </div>
-                <div class="flex">
-                    <p class="moviesparaghrap   text-center text-4xl mt-10 text-red-900 ">Ratings:</p>
-                    <div class="star-icon flex mt-10 ml-5 text-white text-4xl"></div>
+         <section class=" w-max h-max my-auto my-72 p-12 flex">
+            <!---->
+            <div class="ActorPic box-content h-60 w-48 p-12 border-9-red bg-gray-700 absolute"  style="background-Image: url(${BACKDROP_BASE_URL+actor.profile_path})">
+               
+                    <div class="name text-red-800 font-Radley text-8xl mx-60 my-0 absolute">${actor.name}</div>
+                    <div class="nameShadow  text-white font-Radley text-8xl text-8xl mx-60 my-2 absolute">
+                        <h1> ${actor.name}</h1>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <div class="container mx-0 w-max h-max my-30 p-20">
+            <h3 class="AB text-white font-Radley text-4xl my-5 mx-5"> About</h3>
+
+            <div class="desc grid grid-cols-2 gap-10 mx-5">
+                <div class="bttn w-24 h-10 bg-red-100 mr-40 text-2xl text-center rounded-lg text-red-800 font-Radley">
+                    <p class="G"></p>Gender</p>
+                </div>
+                <div class="bttn w-24 h-9 bg-red-700 text-xl text-center rounded-lg ">
+                    <p class="F text-white font-Radley">${getGender(actor)}</p>
+                </div>
+                <div class="bttn w-24 h-10 bg-red-100  text-2xl text-center rounded-lg ">
+                    <p class="B text-red-800 font-Radley">Birthday</p>
+                </div>
+                <div class="bttn w-24 h-10 bg-red-700 text-sm text-center pt-2 rounded-lg ">
+                    <p class="bD text-white font-Radley">${actor.birthday}</p>
+                </div>
+                <div class="bttn w-24 h-10 bg-red-100 text-2xl text-center rounded-lg">
+                    <p class="BI text-red-800 font-Radley">Born in</p>
+                </div>
+                <div class="bttn w-24 h-15 bg-red-700 text-lg text-center rounded-lg ">
+                    <p class="POB text-white font-Radley">${actor.place_of_birth}</p>
+                </div>
+                <div class="bttn w-24 h-9 bg-red-100 text-xl text-center rounded-lg">
+                    <p class="P text-red-800 font-Radley">Popularity</p>
+                </div>
+            </div>
+        </div>
+        <div class="bio w-300 h-300 mr-80 p-12">
+            <h2 class="text-white font-'Radley' text-4xl mx-10 mt-100">Bio</h2>
+            <p class="text-white font-'Radley' text-lg mx-10 text-justify">${actor.biography}</p>
 
         </div>
+
+
+        <div class="knownfor text-white font-'Radley' text-4xl mx-10 mt-0 mb-10">
+            <h2>Known for</h2>
+        </div>
+        <div class="known flex grid-cols-4 jusitfy-between gap-20">
+            <div class="movie1 box-content h-60 w-48 p-12 border-0 bg-gray-700 mx-9 my-1"></div>
+            <div class="movie1 box-content h-60 w-48 p-12 border-0 bg-gray-700 mx-9 my-1"></div>
+            <div class="movie1 box-content h-60 w-48 p-12 border-0 bg-gray-700 mx-9 my-1"></div>
+            <div class="movie1 box-content h-60 w-48 p-12 border-0 bg-gray-700 mx-9 my-1"></div>
+
+
+
+        </div>
+        </section>
       
        
     `;
+}
+
+function getGender(actor) {
+    let gender = "";
+    if (actor.gender == 2) {
+        gender = "male";
+    } else {
+        gender = "female";
+    }
+    return gender;
 }
 
 document.addEventListener("DOMContentLoaded", autorun);

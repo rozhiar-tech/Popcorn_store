@@ -149,7 +149,7 @@ function movieGenre(movie) {
 const renderMovie = (movie, relatedMoviesHTML, renderCreditHtml) => {
     // console.log(movie);
     CONTAINER.innerHTML = `
-     <div  class="bg-black w-full   absolute  ">
+     <div  class="bg-black w-full   absolute z-50  ">
         <div class="flex mt-16 ml-10">
             <div class="mainmovie-div bg-gray-300 bg-no-repeat bg-cover bg-center "  style="background-Image: url(${BACKDROP_BASE_URL+movie.backdrop_path})">
                 <div class="movie-triangle1 z-50  absolute"></div>
