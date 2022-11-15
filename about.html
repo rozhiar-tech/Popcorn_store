@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="mainslider.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,8 +22,55 @@
 
 
 <body class="bg-black">
+  <section class="navigation">
+      <nav class='site-nav pt-1 inset-x-0 top-0 absolute z-30'>
 
-    <div class="aboutdescreption-bage">
+          <div class="ml-14"><i class="fa-solid fa-magnifying-glass text-white text-3xl pr-5 "></i></div>
+          <div class='ml-auto mr-20 '>
+              <a class="mr-16 text-white text-2xl font-semibold hover:text-red-800" style="font-family: 'Poppins', sans-serif;" href='#'>HOME</a>
+              <a class="text-white mr-16 text-2xl font-semibold hover:text-red-800" style="font-family: 'Poppins', sans-serif;" href='about.html'>ABOUT</a>
+          </div>
+          <div class='middle mr-20'>
+              <img class="w-80 h-36 " src="./images/logo.png">
+          </div>
+          <div class='mr-auto ml-10 justify-between '>
+              <a class="mr-16 text-white text-2xl font-semibold  hover:text-red-800" style="font-family: 'Poppins', sans-serif;" href='#'>MOVIES</a>
+              <a class="mr-16 text-white text-2xl font-semibold  hover:text-red-800" style="font-family: 'Poppins', sans-serif;" href='Actors page.html'>ACTORS</a>
+
+          </div>
+      </nav>
+  </section>
+
+  <div class="w-full h-auto ">
+    <div class="slider__contents bg-cover  " style="background-image:url('images/1.png')">
+
+    </div>
+
+    <div class="slider__inner ">
+
+        <div class="slider__contents bg-cover  " style="background-image:url('images/aboutmain.png')">
+
+        </div>
+
+        <div class="slider__contents bg-cover" style="background-image:url('images/2.png')">
+
+        </div>
+        <div class="slider__contents bg-cover  " style="background-image:url('images/3.png')">
+
+        </div>
+        <div class="slider__contents bg-cover  " style="background-image:url('images/4.png')">
+
+        </div>
+    </div>
+
+    <div class="">
+        <img class="mr-auto bg-cover " style="width:670px;height:236px ;margin-top:381px;transform: rotate(-0.1deg);" src="images/traingle5.png">
+        <img class="mr-auto bg-cover  " style="width:670px;height:236px ;margin-top:-236px;transform: rotate(-0.1deg);" src="images/traingle2.png">
+
+    </div>
+</div>
+
+    <div class="aboutdescreption-bage ">
         <p class="moviesparaghrap  mt-3  text-center text-5xl text-white ">WHO WE ARE?</p>
         <div class="flex mt-20 ml-10">
 
@@ -111,8 +159,38 @@
 
         </div>
     </div>
+  <div class=" w-full h-48 "></div>
+    <div class="footer-container  w-full h-auto">
+        <div class="footer-triangles">
+            <div class="footer_triangle_1"></div>
+            <div class="footer_triangle_2"></div>
+        </div>
+        <div class="flex">
+            <div class="socials">
+                <a href="#index.html"><img class="dark_logo" src="images/darker logo.png"></a>
+                <div class="flex justify-around mt-20">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-square-facebook"></i> </a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+                </div>
 
+            </div>
+            <div class="footer flex space-x-32 mx-60 mt-40 justify-center  text-grey">
+                <div class="footer_1  ">
+                    <h3 class="footerfont-style font-bold text-4xl"><a href="#">Movies</a></h3>
+                </div>
+                <div class="footer_2 ">
+                    <h3 class="footerfont-style font-bold text-4xl"><a href="#">About</a></h3>
 
+                </div>
+                <div class="footer_3  text-center">
+                    <h3 class="footerfont-style font-bold text-4xl"><a href="#">Actors</a></h3>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="script.js"></script>
 </body>
 
