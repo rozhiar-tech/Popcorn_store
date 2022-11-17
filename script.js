@@ -150,8 +150,8 @@ const renderMovie = (movie, relatedMoviesHTML, renderCreditHtml) => {
     // console.log(movie);
     CONTAINER.innerHTML = `
      <div  class="bg-black w-full   absolute z-50  ">
-        <div class="flex mt-16 ml-10">
-            <div class="mainmovie-div bg-gray-300 bg-no-repeat bg-cover bg-center "  style="background-Image: url(${BACKDROP_BASE_URL+movie.backdrop_path})">
+        <div class="flex mt-16 ml-10" >
+            <div class="mainmovie-div bg-gray-300 bg-no-repeat bg-cover bg-center "  style="background-Image: url(${BACKDROP_BASE_URL+movie.backdrop_path})" >
                 <div class="movie-triangle1 z-50  absolute"></div>
                 <div class="movie-triangle2 z-50  absolute"></div>
             </div>
@@ -159,7 +159,7 @@ const renderMovie = (movie, relatedMoviesHTML, renderCreditHtml) => {
             <div class="red-circle w-9 h-9 bg-red-900 ml-36 mt-3 rounded-full "></div>
             <div class="line-1 rounded absolute "></div>
 
-            <div class="mainmovie-div flex flex-col gap-24  bg-black ml-24 ">
+            <div class="mainmovie-div flex flex-col gap-24  bg-black ml-24 " >
                 <div class="">
                     <p class="moviesparaghrap  mt-3  text-center text-5xl text-red-900 ">${movie.title}</p>
                 </div>
